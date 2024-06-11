@@ -35,7 +35,7 @@
 
     const root = document.getElementById('root')
 
-    const tagComponent = (tag, textNode) => {
+    const tagComponent = (tag, color, textNode) => {
 
       let decision = () => {
         if (tag === 'me') {
@@ -45,16 +45,16 @@
           return "p"
         }
       }
-      return `<${decision()}>${textNode}</${decision()}>`
+      return `<${decision()} style="color:${color}">${textNode}</${decision()}>`
     }
 
     const app = () => {
       let arr = [];
       for (let i of names) {
-        if(i.includes("문혜림")){
-        arr.push(`${tagComponent("me", i)}`)
+        if(i === "문혜림"){
+        arr.push(`${tagComponent("me", "black", i)}`)
         } else {
-          arr.push(`${tagComponent("other", i)}`)
+          arr.push(`${tagComponent("other", "red", i)}`)
         }
       }
       return arr.join("")
