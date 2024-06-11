@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +9,7 @@
 <body>
   <div id="root"></div>
   <script>
+    //명단
     const names = [
       "구하림",
       "김보미",
@@ -35,7 +35,6 @@
 
     const root = document.getElementById('root')
 
-
     const tagComponent = (tag, textNode) => {
 
       let decision = () => {
@@ -46,12 +45,8 @@
           return "p"
         }
       }
-
       return `<${decision()}>${textNode}</${decision()}>`
-
     }
-
-
 
     const app = () => {
       let arr = [];

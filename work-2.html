@@ -7,25 +7,12 @@
 </head>
 <body>
   <div id="root"></div>
+  <script src="tagComponent.js"></script>
+  <script src="render.js"></script>
+  <script src="app.js"></script>
   <script>
     const root = document.getElementById('root')
-
-    const tagComponent = (tagName, textNode) => {
-      return `<${tagName}>${textNode}</${tagName}>`
-    }
-
-    const app = () => {
-      return `
-      ${tagComponent("h1","문혜림")}
-      ${tagComponent("h2","메타몽")}
-      ${tagComponent("h3","흐에잉")}`
-    }
     console.log(app())
-    
-    const render = () => {
-      root.innerHTML = app()
-    }
-
     render()
   </script>
 </body>
