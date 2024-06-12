@@ -28,6 +28,7 @@ const mode = () => {
 
   let time = new hour(hours, minutes)
   console.log(time.hour)
+
 }
 
 mode()
