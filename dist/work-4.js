@@ -6,6 +6,7 @@ class hour {
         this.hour = hour;
     }
 }
+console.dir(root);
 const mode = () => {
     let today = new Date();
     let hours = today.getHours();
@@ -22,8 +23,9 @@ const mode = () => {
         }
     };
     const ligthMode = () => {
-        main.style.backgroundColor = "#242424";
-        main.style.color = "black";
+        root.style.height = "100vw";
+        root.style.backgroundColor = "#242424";
+        main.style.color = "#ffffff";
     };
     const darkMode = () => {
     };

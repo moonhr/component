@@ -1,4 +1,4 @@
-const root = document.getElementById('root')
+const root = document.getElementById('root')!
 const main = document.getElementById('main')! //null이 아님
 
 class hour {
@@ -7,6 +7,8 @@ class hour {
     this.hour = hour
   }
 }
+
+console.dir(root)
 
 const mode = () => {
   let today = new Date();
@@ -26,8 +28,9 @@ const mode = () => {
   }
   
   const ligthMode = () => {
-    main.style.backgroundColor = "#242424"
-    main.style.color = "black"
+    root.style.height = "100vw"
+    root.style.backgroundColor = "#242424"
+    main.style.color = "#ffffff"
   }
   const darkMode = () => {
     
