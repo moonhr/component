@@ -1,15 +1,9 @@
-// class Basic { 
-//   name : string
-//   age : number
-//   job : string
+// const root = document.getElementById('root')
+// const main = document.getElementById('main')
 
-//   constructor(name : string, age : number, job : string) {
-//     this.name = name;
-//     this.age = age;
-//     this.job = job;
-//   }
-// }
 
+let root = document.querySelector('#root');
+let main = document.querySelector('#main');
 
 
 class hour {
@@ -28,18 +22,22 @@ const mode = () => {
 
   const decision = () => {
     if(time.hour > 9 || time.hour < 18){
-      return ligthMode()
+      return ligthMode(),
+      console.log('light모드')
     } else {
-      return darkMode()
+      return darkMode(),
+      console.log('dark모드')
     }
   }
   
   const ligthMode = () => {
+    main
 
   }
   const darkMode = () => {
     
   }
+  return decision()
 }
 
 mode()
