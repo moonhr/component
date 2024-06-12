@@ -14,21 +14,32 @@
 
 class hour {
   hour: number
-  minute: number
-  constructor(hour: number, minute: number) {
+  constructor(hour: number) {
     this.hour = hour
-    this.minute = minute
   }
 }
 
 const mode = () => {
   let today = new Date();
   let hours = today.getHours();
-  let minutes = today.getMinutes();
 
-  let time = new hour(hours, minutes)
+  let time = new hour(hours)
   console.log(time.hour)
 
+  const decision = () => {
+    if(time.hour > 9 || time.hour < 18){
+      return ligthMode()
+    } else {
+      return darkMode()
+    }
+  }
+  
+  const ligthMode = () => {
+
+  }
+  const darkMode = () => {
+    
+  }
 }
 
 mode()
