@@ -60,13 +60,22 @@ const component = () => {
   //이 함수가 객체라는걸 추론
   let obj = new BasicData("메타몽", 25, "홈프로텍터")
   console.log(obj)
+  console.log(obj instanceof BasicData)
 
   const decision = () => {
-
+    if (obj instanceof BasicData) {
+      return   
+      `<html>
+        <body>
+          <div>${obj._name}</div>
+          <div>${obj._age}</div>
+          <div>${obj._job}</div>
+        </body>
+      </html>`
+    } else {
+      console.error("에러다!")
+    }
   }
-  return
-  `<html>
-
-  </html>`
+  return decision()
 }
-component()
+console.log(component())
