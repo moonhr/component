@@ -13,9 +13,31 @@ const componen = () => {
     }
   }
 
+  let anotherFunc = () => {
+    if(obj.job === "미남"){
+      return '문제있네'
+    } else {
+      return "진실"
+    }
+  }
+
   return `
   <h1>${obj.name}</h1>
   <h1>${innerFunc()}</h1>
-  <h1>${obj.job}</h1>
+  <h1>${anotherFunc()}</h1>
+  `;
+}
+
+
+
+const tagComponent = (tagName, textNode) => {
+  return `<${tagName}>${textNode}</${tagName}>`;
+}
+
+const container = () => {
+  return `
+    ${tagComponent('header', '헤더부분')}
+    ${tagComponent('main', '메인부분')}
+    ${tagComponent('footer', '푸터부분')}
   `;
 }
