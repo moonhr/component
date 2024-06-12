@@ -13,7 +13,7 @@ const mode = () => {
     let time = new hour(hours);
     console.log(time.hour);
     const decision = () => {
-        if (time.hour > 9 || time.hour < 18) {
+        if (time.hour > 9 && time.hour < 18) {
             return ligthMode(),
                 console.log('light모드');
         }
@@ -28,6 +28,9 @@ const mode = () => {
         main.style.color = "#ffffff";
     };
     const darkMode = () => {
+        root.style.height = "100vw";
+        root.style.backgroundColor = "#ffffff";
+        main.style.color = "#858585";
     };
     return decision();
 };
