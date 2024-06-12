@@ -1,6 +1,8 @@
 "use strict";
-const root = document.getElementById('root');
-const main = document.getElementById('main');
+// const root = document.getElementById('root')
+// const main = document.getElementById('main')
+let root = document.querySelector('#root');
+let main = document.querySelector('#main');
 class hour {
     constructor(hour) {
         this.hour = hour;
