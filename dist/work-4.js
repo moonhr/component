@@ -1,8 +1,6 @@
 "use strict";
-// const root = document.getElementById('root')
-// const main = document.getElementById('main')
-let root = document.querySelector('#root');
-let main = document.querySelector('#main');
+const root = document.getElementById('root');
+const main = document.getElementById('main'); //null이 아님
 class hour {
     constructor(hour) {
         this.hour = hour;
@@ -24,7 +22,8 @@ const mode = () => {
         }
     };
     const ligthMode = () => {
-        main;
+        main.style.backgroundColor = "#242424";
+        main.style.color = "black";
     };
     const darkMode = () => {
     };
